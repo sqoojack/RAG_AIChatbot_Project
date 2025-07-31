@@ -1,0 +1,9 @@
+[
+  {
+    "page_content": "環境預處理:\n安裝docker\n登入n8n\n先手動打開docker desktop\n透過 docker-compose.yml 拉取 鏡像 n8nio/n8n:latest，\n終端機輸入: \ndocker-compose up -d\n網頁輸入 http://localhost:5678\ndocker-compose.yml\nversion: \"3.8\"\nservices:\nn8n:\nimage: n8nio/n8n:latest\nports:\n- \"5678:5678\"\nenvironment:\n- GENERIC_TIMEZONE=Asia/Taipei\n- N8N_BASIC_AUTH_ACTIVE=true\n- N8N_BASIC_AUTH_USER=admin\n- N8N_BASIC_AUTH_PASSWORD=admin123\n- N8N_HOST=localhost\n- N8N_PORT=5678\n- N8N_PROTOCOL=http\n- N8N_DISABLE_FILE_ACCESS=false  # ✅ 允許檔案節點使用\nvolumes:\n- ./n8n_data:/home/node/.n8n\n- ./files:/files                 # ✅ 掛載檔案資料夾\n- ./code:/code                   # ✅ 掛載 Python 程式碼資料夾\n建立workflow: 點選左上角新增\nN8N節點介紹:\n觸發節點: 藉由發送對話觸發整個flow\n基礎LLM節點，可以選擇prompt\nOllama節點，輸入port，選擇想要用的model\n轉檔節點，因為輸出節點有格式限制\n輸入﹑輸出節點，docker-compose.yml要配合\n- ./files:/files                 # ✅ 掛載檔案資料夾\n程式節點，可以簡單操作python跟javascript\n指令節點(Execute Command)，要配合docker有安裝的packages，才能跑python，目前不能用!!!",
+    "metadata": {
+      "source": "n8n進度報告_v1.docx",
+      "type": "doc"
+    }
+  }
+]

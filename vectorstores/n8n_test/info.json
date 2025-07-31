@@ -1,0 +1,9 @@
+{
+  "last_edit": "2025-07-29 16:43:07.975383",
+  "files": [
+    "n8n進度報告_v1.docx"
+  ],
+  "img_model": "gemma3:27b",
+  "chunk_size": 200,
+  "chunk_nums": 6
+}
