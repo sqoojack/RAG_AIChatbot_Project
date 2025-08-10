@@ -23,8 +23,8 @@ with col_left:
 
     # 上傳用來建立新資料庫的檔案
     uploaded_files = st.file_uploader(
-        "**上傳 PDF, Word, PPT, 純文字或圖片檔案**",
-        type=["pdf", "ppt", "pptx", "docx", "txt", "png", "jpg", "jpeg", "mp3"],
+        "**上傳 PDF, Word, PPT, 影音, 純文字或圖片檔**",
+        type=["pdf", "ppt", "pptx", "docx", "txt", "png", "jpg", "jpeg", "mp3", "mp4"],
         accept_multiple_files=True,
         key="new_db_files"
     )
@@ -118,7 +118,7 @@ with col_right:
         st.markdown("### ➕ 新增檔案到此資料庫")
         uploaded_files = st.file_uploader(
             "**選擇檔案**",
-            type=["pdf", "ppt", "pptx", "docx", "txt", "png", "jpg", "jpeg", "mp3"],
+            type=["pdf", "ppt", "pptx", "docx", "txt", "png", "jpg", "jpeg", "mp3", "mp4"],
             accept_multiple_files=True,
             key="add_files"
         )
